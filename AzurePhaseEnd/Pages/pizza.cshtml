@@ -1,0 +1,19 @@
+﻿@page
+@model AzurePhaseEnd.Pages.pizzaModel
+@{
+    ViewData["Title"] = "Pizza Selection";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<form method="post" asp-page-handler="AddToCart">
+    <label for="pizzaType">Select Pizza Type:</label>
+    <select asp-for="SelectedPizza" asp-items="Model.PizzaTypes">
+        <option value="">-- Select Pizza --</option>
+    </select>
+
+    <label for="quantity">Quantity:</label>
+    <input type="number" asp-for="Quantity" min="1" required />
+
+    <button type="submit">Add to Cart</button>
+</form>

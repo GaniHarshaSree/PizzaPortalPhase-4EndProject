@@ -1,0 +1,16 @@
+﻿@page
+@model AzurePhaseEnd.Pages.OrderCheckoutModel
+@{
+    ViewData["Title"] = "Order Checkout";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Pizza: @Model.SelectedPizza</p>
+<p>Quantity: @Model.Quantity</p>
+<p>Total Price: $@Model.TotalPrice</p>
+
+<form method="post" asp-page-handler="PlaceOrder">
+    <button type="submit">Checkout</button>
+</form>
+

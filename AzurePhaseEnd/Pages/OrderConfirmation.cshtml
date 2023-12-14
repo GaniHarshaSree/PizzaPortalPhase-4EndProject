@@ -1,0 +1,13 @@
+﻿@page
+@model AzurePhaseEnd.Pages.OrderConfirmationModel
+@{
+    ViewData["Title"] = "Order Confirmation";
+}
+
+<h1>@ViewData["Title"]</h1>
+
+<p>Thank you for your order!</p>
+<p>Order ID: @Model.OrderId</p>
+<p>Amount: $@Model.Amount</p>
+<p>Selected Pizza: @Model.SelectedPizza</p>
+
